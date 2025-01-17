@@ -87,7 +87,7 @@
                     </button>
 
                     <button wire:click="deleteConversation"
-                        wire:confirm="Are you sure delete {{ $conversation->isGroup() ? 'Group' : 'Chat' }}"
+                        wire:confirm="{{ __('Are you sure you want to delete :chat', ['chat' => $conversation->isGroup() ? __('Group') : __('Chat')]) }}"
                         class="w-full text-start">
 
                         <x-wirechat::dropdown-link class="text-red-500 dark:text-red-500">
@@ -99,7 +99,7 @@
 
 
                     @if ($conversation->isGroup() && !auth()->user()->isOwnerOf($conversation))
-                            <button wire:click="exitConversation" wire:confirm="Are you sure want to exit Group?"
+                            <button wire:click="exitConversation" wire:confirm="{{ __('Are you sure want to exit Group?') }}"
                                 class="w-full text-start ">
 
                                 <x-wirechat::dropdown-link class="text-red-500 dark:text-gray-500">

@@ -91,14 +91,14 @@
                                             @if ($participant->isAdmin())
                                                 <x-wirechat::dropdown-button
                                                     wire:click="dismissAdmin('{{ $participant->id }}')"
-                                                    wire:confirm="Are you sure you want to dismiss {{$participant->participantable?->display_name }} as Admin ?"
+                                                    wire:confirm="{{ __('Are you sure you want to dismiss :display_name as Admin ?', ['display_name' => $participant->participantable?->display_name]) }}"
                                                     class=" dark:hover:bg-gray-700 ">
                                                     Dismiss As Admin
                                                 </x-wirechat::dropdown-button>
                                             @else
                                                 <x-wirechat::dropdown-button
                                                     wire:click="makeAdmin('{{ $participant->id }}')"
-                                                    wire:confirm="Are you sure you want to make {{$participant->participantable?->display_name }} an Admin ?"
+                                                    wire:confirm="{{ __('Are you sure you want to make :display_name an Admin ?', ['display_name' => $participant->participantable?->display_name]) }}"
                                                     class=" dark:hover:bg-gray-700 ">
                                                     Make Admin
                                                 </x-wirechat::dropdown-button>
@@ -109,7 +109,7 @@
                                                 @if (!$participant->isOwner() && !$loopParticipantIsAuth && !$participant->isAdmin())
                                                 <x-wirechat::dropdown-button
                                                     wire:click="removeFromGroup('{{ $participant->id }}')"
-                                                    wire:confirm="Are you sure you want to remove {{$participant->participantable?->display_name }} from Group ?"
+                                                    wire:confirm="{{ __('Are you sure you want to remove :display_name from Group ?', ['display_name' => $participant->participantable?->display_name]) }}"
                                                     class="text-red-500 dark:text-red-500 dark:hover:bg-gray-700">
                                                     Remove
                                                 </x-wirechat::dropdown-button>
