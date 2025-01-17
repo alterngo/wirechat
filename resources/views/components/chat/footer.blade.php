@@ -187,9 +187,9 @@
         @if ($replyMessage != null)
             <section class="p-px py-1 w-full col-span-12">
                 <div class="flex justify-between items-center dark:text-white">
-                    <h6 class="text-sm">Replying to
+                    <h6 class="text-sm">{{ __('Replying to') }}
                         <span class="font-bold">
-                            {{ $replyMessage?->ownedBy(auth()->user()) ? ' Yourself' : $replyMessage->sendable?->name }}
+                            {{ $replyMessage?->ownedBy(auth()->user()) ? __(' Yourself') : $replyMessage->sendable?->name }}
                         </span>
                     </h6>
                     <button  wire:loading.attr="disabled"  wire:click="removeReply()" class="disabled:cursor-progress">
