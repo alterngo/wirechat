@@ -55,7 +55,7 @@
                             @else
                                 <button type="button" wire:target="photo" wire:loading.attr="disabled"
                                     class="disabled:cursor-not-allowed bottom-0 inset-x-0 bg-gray-500/40 hover:bg-gray-500/80 m-0 p-0 border-0  dark:bg-white/40  dark:hover:bg-gray-700 transition-colors  text-red-800 flex items-center justify-center  absolute "
-                                    wire:confirm="Are you sure you want to delete photo ?" wire:click="deletePhoto">
+                                    wire:confirm="{{ __('Are you sure you want to delete photo ?') }}" wire:click="deletePhoto">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-6 w-5 h-5">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -271,7 +271,7 @@
     <section class="flex flex-col justify-start w-full">
 
         @if ($isGroup && !$authIsOwner)
-            <button wire:confirm="Are you sure you want to exit Group ?" wire:click="exitConversation"
+            <button wire:confirm="{{ __('Are you sure you want to exit Group ?') }}" wire:click="exitConversation"
                 class=" w-full py-5 px-8 hover:bg-gray-200 transition dark:hover:bg-gray-700 flex gap-3 items-center text-red-500">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-box-arrow-right w-5 h-5" viewBox="0 0 16 16">
@@ -288,7 +288,7 @@
         @if ($isGroup && $authIsOwner)
             <div>
 
-                <button wire:confirm="Are you sure you want to delete group ?" wire:click="deleteGroup"
+                <button wire:confirm="{{ __('Are you sure you want to delete group ?') }}" wire:click="deleteGroup"
                     class=" w-full py-5 px-8 hover:bg-gray-200 transition dark:hover:bg-gray-700 text-start space-y-2   gap-3   text-red-500">
                     <div class="flex gap-3 items-center ">
 
@@ -327,7 +327,7 @@
 
         {{-- Only show if is not group --}}
         @if (!$isGroup)
-            <button wire:confirm="Are you sure you want to delete Chat ?" wire:click="deleteChat"
+            <button wire:confirm="{{ __('Are you sure you want to delete Chat ?') }}" wire:click="deleteChat"
                 class=" w-full py-5 px-8 hover:bg-gray-200 transition dark:hover:bg-gray-700 flex gap-3 items-center text-red-500">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-6 w-5 h-5">
