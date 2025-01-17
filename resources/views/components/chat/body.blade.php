@@ -194,7 +194,7 @@
 
                                             @if ($message->ownedBy(auth()->user())|| ($authParticipant->isAdmin() && $isGroup))
                                                 <button dusk="delete_message_for_everyone" wire:click="deleteForEveryone('{{ $message->id }}')"
-                                                    wire:confirm="Are you sure?" class="w-full text-start">
+                                                    wire:confirm="{{ __('Are you sure?') }}" class="w-full text-start">
                                                     <x-wirechat::dropdown-link>
                                                         {{ __('Delete for everyone') }}
                                                     </x-wirechat::dropdown-link>
@@ -205,7 +205,7 @@
                                             {{-- Dont show delete for me if is group --}}
                                             @if (!$isGroup) 
                                             <button dusk="delete_message_for_me" wire:click="deleteForMe('{{ $message->id }}')"
-                                                wire:confirm="Are you sure?" class="w-full text-start">
+                                                wire:confirm="{{ __('Are you sure?') }}" class="w-full text-start">
                                                 <x-wirechat::dropdown-link>
                                                     {{ __('Delete for me') }}
                                                 </x-wirechat::dropdown-link>
