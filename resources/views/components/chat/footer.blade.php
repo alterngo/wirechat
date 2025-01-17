@@ -339,7 +339,7 @@
                                     </span>
 
                                     <span class=" dark:text-white">
-                                        File
+                                        {{ __('File') }}
                                     </span>
                                 </div>
                             </label>
@@ -372,7 +372,7 @@
                                     </span>
 
                                     <span class=" dark:text-white">
-                                        Photos & Videos
+                                        {{ __('Photos & Videos') }}
                                     </span>
                                 </div>
                             </label>

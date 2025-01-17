@@ -32,7 +32,7 @@
                         class="h-8 w-8 lg:w-10 lg:h-10 " />
                     <h6 class="font-bold text-base text-gray-800 dark:text-white w-full truncate">
                         {{ $group ? $group?->name : $receiver?->display_name }} @if ($conversation->isSelfConversation())
-                            (You)
+                            ({{ __('You') }})
                         @endif
                     </h6>
                 </div>
@@ -72,7 +72,7 @@
 
 
                         <x-wirechat::dropdown-link href='{{ route(WireChat::indexRouteName()) }}'>
-                            Close Chat
+                           {{ __('Close Chat') }}
                         </x-wirechat::dropdown-link>
 
 
@@ -82,7 +82,7 @@
                         wire:confirm="Are you sure you want to clear this Chat History ?">
 
                         <x-wirechat::dropdown-link >
-                            Clear Chat History
+                            {{ __('Clear Chat History') }}
                         </x-wirechat::dropdown-link>
                     </button>
 
@@ -91,7 +91,7 @@
                         class="w-full text-start">
 
                         <x-wirechat::dropdown-link class="text-red-500 dark:text-red-500">
-                            Delete Chat
+                            {{ __('Delete Chat') }}
                         </x-wirechat::dropdown-link>
 
                     </button>

@@ -207,7 +207,7 @@
                                             <button dusk="delete_message_for_me" wire:click="deleteForMe('{{ $message->id }}')"
                                                 wire:confirm="Are you sure?" class="w-full text-start">
                                                 <x-wirechat::dropdown-link>
-                                                    Delete for me
+                                                    {{ __('Delete for me') }}
                                                 </x-wirechat::dropdown-link>
                                             </button>
                                             @endif
@@ -215,7 +215,7 @@
 
                                             <button dusk="reply_to_message_button" wire:click="setReply('{{ $message->id }}')"class="w-full text-start">
                                                 <x-wirechat::dropdown-link>
-                                                    Reply
+                                                    {{ __('Reply') }}
                                                 </x-wirechat::dropdown-link>
                                             </button>
 
