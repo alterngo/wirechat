@@ -6,6 +6,11 @@
         $isGroup = $conversation->isGroup();
         $group = $conversation->group;
 
+        if ($isGroup) {
+            $authIsAdminInGroup = false;
+            $authIsOwner = false;
+        }
+
 
     @endphp
 
