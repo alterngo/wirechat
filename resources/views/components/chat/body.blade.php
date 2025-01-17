@@ -196,7 +196,7 @@
                                                 <button dusk="delete_message_for_everyone" wire:click="deleteForEveryone('{{ $message->id }}')"
                                                     wire:confirm="Are you sure?" class="w-full text-start">
                                                     <x-wirechat::dropdown-link>
-                                                        Delete for everyone
+                                                        {{ __('Delete for everyone') }}
                                                     </x-wirechat::dropdown-link>
                                                 </button>
                                             @endif
