@@ -98,16 +98,16 @@
                     @endif
 
 
-                    @if ($conversation->isGroup() && !auth()->user()->isOwnerOf($conversation))
-                            <button wire:click="exitConversation" wire:confirm="{{ __('Are you sure want to exit Group?') }}"
-                                class="w-full text-start ">
+{{--                    @if ($conversation->isGroup() && !auth()->user()->isOwnerOf($conversation))--}}
+{{--                            <button wire:click="exitConversation" wire:confirm="{{ __('Are you sure want to exit Group?') }}"--}}
+{{--                                class="w-full text-start ">--}}
 
-                                <x-wirechat::dropdown-link class="text-red-500 dark:text-gray-500">
-                                    Exit Group
-                                </x-wirechat::dropdown-link>
+{{--                                <x-wirechat::dropdown-link class="text-red-500 dark:text-gray-500">--}}
+{{--                                    Exit Group--}}
+{{--                                </x-wirechat::dropdown-link>--}}
 
-                            </button>
-                        @endif
+{{--                            </button>--}}
+{{--                        @endif--}}
 
                     </x-slot>
                 </x-wirechat::dropdown>
