@@ -11,22 +11,22 @@
       <!-- JavaScript to prevent flickering -->
       <script>
         // Function to apply or remove the dark theme
-        function updateTheme(isDark) {
-            if (isDark) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-        }
+        // function updateTheme(isDark) {
+        //     if (isDark) {
+        //         document.documentElement.classList.add('dark');
+        //     } else {
+        //         document.documentElement.classList.remove('dark');
+        //     }
+        // }
     
         // Check the initial theme preference
-        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        updateTheme(darkModeMediaQuery.matches);
+        // const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        // updateTheme(darkModeMediaQuery.matches);
     
         // Listen for changes in the theme preference
-        darkModeMediaQuery.addEventListener('change', (event) => {
-            updateTheme(event.matches);
-        });
+        // darkModeMediaQuery.addEventListener('change', (event) => {
+        //     updateTheme(event.matches);
+        // });
       </script>
     
     <!-- Fonts -->

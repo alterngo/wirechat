@@ -36,11 +36,11 @@
                 }
             }
 
-            @media (prefers-color-scheme: dark) {
-                &::-webkit-scrollbar-thumb {
-                    background-color: #374151;
-                }
-            }
+            /*@media (prefers-color-scheme: dark) {*/
+            /*    &::-webkit-scrollbar-thumb {*/
+            /*        background-color: #374151;*/
+            /*    }*/
+            /*}*/
 
             &::-webkit-scrollbar-track {
                 background-color: transparent;
